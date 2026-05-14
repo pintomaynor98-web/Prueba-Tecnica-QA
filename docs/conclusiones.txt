@@ -1,61 +1,41 @@
-﻿TECHNICAL EXECUTION PROTOCOL - Prueba-Tecnica-QA
+﻿TECHNICAL ANALYSIS REPORT - SAUCEDEMO PLATFORM
 
-1. PROJECT ACCESS
-The code can be audited via either of the following two ways:
-* Via Repository: Cloning the project from GitHub.
-* Via Local: Extracting the content of the compressed file (.zip) named 'Prueba-Tecnica-QA'.
+1. PLATFORM INTERFACE ANALYSIS
+* URL Under Test: https://www.saucedemo.com/
+* Element Interaction: The platform utilizes 'data-test' attributes for critical components (login, inventory, checkout), which facilitates robust automation and reduces selector fragility.
+* Page Navigation: The application follows a Sequential Navigation Pattern, requiring synchronous transitions between inventory, cart, and checkout steps.
 
-2. ENVIRONMENT SETUP
-Regardless of the access method, it is mandatory to rebuild the project dependencies before execution. Open a terminal in the 'Prueba-Tecnica-QA' root directory and run:
+2. EXECUTION & VALIDATION RESULTS
+* Authentication Phase: Successful DOM injection of credentials and transition to '/inventory.html'.
+* Inventory Logic: The script successfully interacted with the 'add-to-cart' action listeners for two distinct SKU items.
+* Data Integrity: The '.cart_list' container correctly persisted the selected objects throughout the session.
+* Transaction Finalization: The process successfully reached the '/checkout-complete.html' state, confirmed by the presence of the '.complete-header' element.
 
-npm install
+3. NETWORK & PERFORMANCE OBSERVATIONS
+* DOM Loading: The main resources (JS/CSS) showed a 200 OK status, ensuring a stable environment for Cypress interaction.
+* Third-Party Activity: Minor 401 statuses were detected from 'backtrace.io' (monitoring tool); these do not affect the page's core business logic or the automation results.
 
-3. EXECUTION MODES
-
-A. Graphical Interface (Interactive Mode)
-For a visual audit of the flow and selectors in real-time:
-
-npx cypress open
-
-* Steps: Select E2E Testing > Browser (Chrome/Edge) > saucedemo.cy.js.
-
-B. Command Line (Headless Mode)
-For a quick automated validation with results reported in the console:
-
-npx cypress run
-
-4. TEST COVERAGE (E2E)
-* File: cypress/e2e/saucedemo.cy.js
-* Flow: User authentication -> Adding 2 items to inventory -> Checkout (shipping/billing) -> Final purchase confirmation.
+4. FINAL EVALUATION
+The automated flow confirms that the SauceDemo purchase funnel is fully operational and the interface responds correctly to the simulated user interactions.
 
 ================================================================================
 
-PROTOCOLO DE EJECUCIÓN TÉCNICA - Prueba-Tecnica-QA
+INFORME DE ANÁLISIS TÉCNICO - PLATAFORMA SAUCEDEMO
 
-1. ACCESO AL PROYECTO
-El código puede ser auditado mediante cualquiera de las siguientes dos vías:
-* Vía Repositorio: Clonando el proyecto desde GitHub.
-* Vía Local: Extrayendo el contenido del archivo comprimido (.zip) llamado 'Prueba-Tecnica-QA'.
+1. ANÁLISIS DE LA INTERFAZ DE LA PÁGINA
+* URL de Prueba: https://www.saucedemo.com/
+* Interacción de Elementos: La plataforma utiliza atributos 'data-test' para componentes críticos (login, inventario, checkout), lo que facilita una automatización robusta y reduce la fragilidad de los selectores.
+* Navegación: La aplicación sigue un Patrón de Navegación Secuencial, requiriendo transiciones síncronas entre los pasos de inventario, carrito y checkout.
 
-2. PREPARACIÓN DEL ENTORNO
-Independientemente del método de acceso, es imperativo reconstruir las dependencias del proyecto antes de la ejecución. Abra una terminal en la raíz del directorio 'Prueba-Tecnica-QA' y ejecute:
+2. RESULTADOS DE EJECUCIÓN Y VALIDACIÓN
+* Fase de Autenticación: Inyección exitosa de credenciales en el DOM y transición hacia '/inventory.html'.
+* Lógica de Inventario: El script interactuó correctamente con los 'action listeners' de compra para dos artículos distintos.
+* Integridad de Datos: El contenedor '.cart_list' mantuvo correctamente la persistencia de los objetos seleccionados durante la sesión.
+* Finalización de Transacción: El proceso alcanzó exitosamente el estado '/checkout-complete.html', confirmado por la presencia del elemento '.complete-header'.
 
-npm install
+3. OBSERVACIONES DE RED Y RENDIMIENTO
+* Carga del DOM: Los recursos principales (JS/CSS) mostraron estados 200 OK, asegurando un entorno estable para la interacción de Cypress.
+* Actividad de Terceros: Se detectaron estados 401 menores de 'backtrace.io' (herramienta de monitoreo); estos no afectan la lógica de negocio de la página ni los resultados de la automatización.
 
-3. MODALIDADES DE EJECUCIÓN
-
-A. Interfaz Gráfica (Modo Interactivo)
-Para una auditoría visual del flujo y los selectores en tiempo real:
-
-npx cypress open
-
-* Pasos: Seleccione E2E Testing > Navegador (Chrome/Edge) > saucedemo.cy.js.
-
-B. Línea de Comandos (Modo Headless)
-Para una validación automatizada rápida con reporte de resultados en consola:
-
-npx cypress run
-
-4. COBERTURA DEL TEST (E2E)
-* Archivo: cypress/e2e/saucedemo.cy.js
-* Flujo: Autenticación de usuario -> Adición de 2 ítems al inventario -> Checkout (envío/facturación) -> Confirmación final de compra.
+4. EVALUACIÓN FINAL
+El flujo automatizado confirma que el embudo de compra de SauceDemo es plenamente operativo y la interfaz responde correctamente a las interacciones de usuario simuladas.
