@@ -41,3 +41,31 @@ INFORME DE HALLAZGOS TÉCNICOS - AUTOMATIZACIÓN SAUCEDEMO
 4. PERSISTENCIA DE ESTADO
 * Hallazgo: El estado de la sesión se mantiene correctamente al navegar entre '.cart_html' y 'checkout-step-one.html'.
 * Impacto: Garantiza la integridad de los datos de los objetos de compra durante la transición de la interfaz de usuario a la capa de lógica de negocio.
+
+=============================================================
+CONCLUSIONES DE LA API: DEMOBLAZE
+API CONCLUSIONS: DEMOBLAZE
+=============================================================
+
+--- SECCIÓN EN ESPAÑOL ---
+
+1. DESCRIPCIÓN DEL EJERCICIO:
+- Se realizó la automatización de pruebas para los servicios REST de la plataforma Demoblaze, enfocándose en los procesos de Registro (Signup) e Inicio de Sesión (Login).
+- El objetivo fue validar la integración técnica, identificando los datos de entrada y capturando las respuestas del servidor.
+
+2. ACTIVIDADES REALIZADAS:
+- Identificación de Entradas: Se definieron objetos JSON con los parámetros 'username' y 'password'.
+- Captura de Salidas: Se verificaron y documentaron las respuestas para casos de éxito (creación de usuario y generación de Auth_token) y casos de error (usuarios duplicados y credenciales incorrectas).
+- Validación de Protocolo: Se confirmó el uso de métodos POST y códigos de estado HTTP 200 para la comunicación con la API.
+
+
+--- ENGLISH SECTION ---
+
+1. EXERCISE DESCRIPTION:
+- Automated testing was performed for the Demoblaze platform's REST services, focusing on the Signup and Login processes.
+- The objective was to validate the technical integration by identifying input data and capturing server responses.
+
+2. ACTIVITIES PERFORMED:
+- Input Identification: JSON objects were defined with 'username' and 'password' parameters.
+- Output Capture: Server responses were verified and documented for success cases (user creation and Auth_token generation) and error cases (duplicate users and incorrect credentials).
+- Protocol Validation: The use of POST methods and HTTP 200 status codes for API communication was confirmed.

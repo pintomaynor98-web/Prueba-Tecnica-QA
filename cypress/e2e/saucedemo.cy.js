@@ -23,7 +23,6 @@ describe('Prueba Técnica - Compra en Saucedemo', () => {
         cy.get('[data-test="checkout"]').click()
 
         // 6. Llenar información de envío
-        // Aquí coloco tu nombre como profesional encargado
         cy.get('[data-test="firstName"]').type('Maynor')
         cy.get('[data-test="lastName"]').type('Pinto')
         cy.get('[data-test="postalCode"]').type('11101')

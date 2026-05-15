@@ -59,3 +59,25 @@ npx cypress run
 4. COBERTURA DEL TEST (E2E)
 * Archivo: cypress/e2e/saucedemo.cy.js
 * Flujo: Autenticación de usuario -> Adición de 2 ítems al inventario -> Checkout (envío/facturación) -> Confirmación final de compra.
+
+GUÍA DE CONFIGURACIÓN Y EJECUCIÓN / SETUP AND EXECUTION GUIDE
+=========================================================
+PROYECTO: Automatización de API Demoblaze / Demoblaze API Automation
+TECNOLOGÍA: Cypress.io
+
+REQUISITOS / PREREQUISITES:
+--------------------------
+- Node.js (Versión 14 o superior) / Node.js (Version 14 or higher)
+- Navegador Google Chrome / Google Chrome Browser
+
+INSTRUCCIONES (ESPAÑOL):
+-----------------------
+1. Instalación: Abra una terminal en la raíz del proyecto y ejecute 'npm install'.
+2. Ejecución Visual: Use el comando 'npx cypress open' y seleccione el archivo 'demoblaze_api.cy.js'.
+3. Ejecución por Consola: Use 'npx cypress run' para generar resultados y evidencias automáticas.
+
+INSTRUCTIONS (ENGLISH):
+----------------------
+1. Installation: Open a terminal in the project root and run 'npm install'.
+2. Visual Execution: Use the command 'npx cypress open' and select 'demoblaze_api.cy.js'.
+3. Headless Execution: Use 'npx cypress run' to trigger automated results and evidence.
