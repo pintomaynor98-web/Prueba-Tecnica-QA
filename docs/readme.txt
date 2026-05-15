@@ -64,6 +64,7 @@ GUÍA DE CONFIGURACIÓN Y EJECUCIÓN / SETUP AND EXECUTION GUIDE
 =========================================================
 PROYECTO: Automatización de API Demoblaze / Demoblaze API Automation
 TECNOLOGÍA: Cypress.io
+ESTRUCTURA: Carpeta cypress/API / cypress/API Folder
 
 REQUISITOS / PREREQUISITES:
 --------------------------
@@ -72,12 +73,14 @@ REQUISITOS / PREREQUISITES:
 
 INSTRUCCIONES (ESPAÑOL):
 -----------------------
-1. Instalación: Abra una terminal en la raíz del proyecto y ejecute 'npm install'.
-2. Ejecución Visual: Use el comando 'npx cypress open' y seleccione el archivo 'demoblaze_api.cy.js'.
-3. Ejecución por Consola: Use 'npx cypress run' para generar resultados y evidencias automáticas.
+1. Instalación: Ejecute 'npm install' en la raíz del proyecto.
+2. Ejecución Visual: Use el comando 'npx cypress open'. Una vez abierto, seleccione el archivo dentro de "cypress/API".
+3. Ejecución por Consola: Ejecute el siguiente comando para correr el script directamente:
+   npx cypress run --spec "cypress/API/demoblaze_api.cy.js"
 
 INSTRUCTIONS (ENGLISH):
 ----------------------
-1. Installation: Open a terminal in the project root and run 'npm install'.
-2. Visual Execution: Use the command 'npx cypress open' and select 'demoblaze_api.cy.js'.
-3. Headless Execution: Use 'npx cypress run' to trigger automated results and evidence.
+1. Installation: Run 'npm install' in the project root.
+2. Visual Execution: Use 'npx cypress open'. Once open, select the file inside "cypress/API".
+3. Headless Execution: Run the following command to execute the script directly:
+   npx cypress run --spec "cypress/API/demoblaze_api.cy.js"
